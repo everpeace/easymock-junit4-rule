@@ -1,0 +1,15 @@
+This module provides a @Rule of JUnit4 which injects EasyMock objects to a test case object using annotation.
+
+example:
+public class SomeTestCase{
+
+  @Rule
+  public InjectEasyMockObject injectEasyMockObject = new InjectEasyMockObject();
+
+  @EasyMockObject(EasyMockType.STRICT)
+  private SomeClass strictMock;
+
+  @EasyMockObject
+  private SomeClass defaultMock;
+  ...
+}
